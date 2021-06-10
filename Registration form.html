@@ -1,0 +1,141 @@
+<html>
+<head>
+<title> Student Registration form</title>
+</head>
+<style>
+  h3{
+	text-align:center;
+	}
+  
+  table{
+	border-radius: 10px;
+	width: 100%;
+	border: 2px solid gray;
+	}
+  input[type=text]{
+	border: 1px solid gray;
+	border-radius: 3px;
+	width:100%;
+	}
+  h4{
+  line-height:0.1;
+  }
+  td{
+  text-align:justify;
+  }
+</style>
+<body>
+<h3>STUDENT REGISTRATION FORM</h3>
+
+<h4> General Information </h4>
+<table>
+ <tr>
+ <td> Last name </td>
+ <td> First name </td>
+ <td> Middle name </td>
+ </tr>
+ <tr>
+ <td><input id="Lastname" type="text" name="Lastname" placeholder="e.g John"></td>
+ <td><input id="Firstname" type="text" name="Firstname" placeholder="e.g Roxas"></td>
+  <td><input id="Middlename" type="text" name="Midldename"></td>
+  </tr>
+  <tr>
+  <td> Birth date </td>
+  <td> Email </td>
+  <td> Phone Number </td>
+  </tr>
+  <tr>
+  <td><input id="Birthdate" type="date" name="Birthdate"></td>
+  <td><input id="Email" type="text" name="Email" placeholder="example@example.com"></td>  
+  <td><input id="Phonenumber" type="text" name="Phonenumber" placeholder="09000000000" maxlength="11"></td>
+  </tr>
+  <tr>
+  <td>Gender</td>
+  <td>Citizenship</td>
+  <td>Student ID</td>
+  </tr>
+  <tr>
+  <td><select id="Gender" name="gender"><option value="Male">Male</option>
+										<option value="Female">Female</option>
+										<option value="Other">Others</option>
+	  </select></td>
+  <td><input id="Citizenship" type="text" name="Citizenship" placeholder="e.g Filipino"></td>
+  <td><input id="StudentID" type="text" name="StudentID" placeholder="e.g 202010010" maxlength="9"></td>
+  </tr>
+  <tr>
+  <td>Grade</td>
+  <td>Semester</td>
+  <td>Entry Year</td>
+  </tr>
+  <tr>
+   <td><input id="Grade" type="text" name="Grade"></td>
+   <td><select id="Semester" name="Semester"><option value="FirstSem">1st Semester</option>
+											 <option value="SecondSem">2nd Semester</option>
+   <td><input id="Entryyear" type="text" name="Entry Year" placeholder="e.g 2020"></td>
+  </tr>
+ </table>
+ 
+ <h4>Residence Information </h4>
+ <table>
+ <tr>
+  <td>Address</td>
+  <td>City</td> 
+  <td>Province</td>
+  </tr>
+  <tr>
+<td><input id="Address" type="text" name="Address"></td>
+<td><input id="City" type="text" name="City"></td>
+<td><input id="Province" type="text" name="Province"></td>
+  </tr>
+ <tr>
+<td>Postal Code</td>
+<td>Telephone Number</td>
+ </tr>
+ <tr>
+ <td><input id="PostalCode" type="text" name="Postal Code"></td>
+  <td><input id="Telephonenumber" type="text" name="Telephone Number"></td>
+ </td>
+ </table>
+ <h4>Parent's Information</h4>
+ <table>
+ <tr>
+ <td>Mother's Information</td>
+ </tr>
+ <tr>
+ <td>Name</td>
+ <td>Address</td>
+ <td>Phone Number</td>
+ </tr>
+ <tr>
+ <td><input id="MName" type="text" name="Mother name"></td>
+ <td><input id="MAddress" type="text" name="Mother Address"></td>
+ <td><input id="MPhoneNumber" type="text" name="Mother phone number"></td>
+ </tr>
+ <tr>
+ <td>Father's Information</td>
+ </tr>
+ <tr>
+ <td>Name</td>
+ <td>Address</td>
+ <td>Phone Number</td>
+ </tr>
+ <tr>
+ <td><input id="FName" type="text" name="Father name"></td>
+ <td><input id="FAddress" type="text" name="Father Address"></td>
+ <td><input id="FPhoneNumber" type="text" name="Father phone number"></td>
+ </tr>
+ <tr>
+ <td>Guardian's Information</td>
+ </tr>
+ <tr>
+ <td>Name</td>
+ <td>Address</td>
+ <td>Phone Number</td>
+ </tr>
+ <tr>
+ <td><input id="GName" type="text" name="Guardian name"></td>
+ <td><input id="GAddress" type="text" name="Guardian Address"></td>
+ <td><input id="GPhoneNumber" type="text" name="Guardian phone number"></td>
+ </tr>
+ </table>
+</body>			
