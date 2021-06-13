@@ -56,6 +56,27 @@
             }
         }
 
+        #bar{
+            position: fixed;
+            height: 6px;
+            background-color: #dc4308; /* For browsers that do not support gradients */
+            background-image: linear-gradient(to right, #dc4308 , #f9b34d);
+            top:55px;
+            left:0;
+            width: 100%;
+            z-index: 9;
+        }
+
+        #barb{
+            height: 6px;
+            background-color: #dc4308; /* For browsers that do not support gradients */
+            background-image: linear-gradient(to right, #dc4308 , #f9b34d);
+            bottom:30px;
+            left:0;
+            width: 100%;
+            z-index: 9;
+        }
+
         .content{
             margin:10%;
         }
@@ -68,7 +89,9 @@
             font-weight: 700;
             font-size: 60px;
             text-shadow: 3px 3px 5px #000;
+            text-transform: lowercase;
             cursor:default;
+            letter-spacing: 2px;
         }
 
         /*form section title*/
@@ -93,6 +116,7 @@
             padding: 10px 20px 20px 20px;
             border-radius: 5px;
             margin-bottom:200px;
+            box-shadow: 2px 2px 10px;
         }
 
         /*input label*/
@@ -104,17 +128,6 @@
 
         input, select{
             width: 100%;
-            font-weight: normal;
-        }
-
-        /*placeholder text color*/
-        select {
-            color: #9e9e9e; 
-        }
-
-        /*select options text color (not including placeholder)*/
-        option:not(:first-of-type) {
-            color: black;
             font-weight: normal;
         }
 
@@ -130,11 +143,13 @@
             color: #000;
             text-decoration: none;
             cursor: pointer;
-            transition: opacity 2s;
+            transition: background-color 2s, color 2s, opacity 2s;
         }
 
         input[type=submit]:hover{
             opacity: 0.6;
+            background-color: #555; 
+            color: #fff;
         }
 
         .firstrow{
@@ -194,15 +209,15 @@
             
         /*TEXT SELECTION*/
         ::selection {
-            color: #616161;
-            background: #f9f871;
-        }     
+            color: #f9b34d;
+            background: #616161;
+        }    
 
         /*scroll to top*/
         #myBtn {
             display: none; /* Hidden by default */
             position: fixed; /* Fixed/sticky position */
-            bottom: 40px; /* Place the button at the bottom of the page */
+            bottom: 50px; /* Place the button at the bottom of the page */
             right: 30px; /* Place the button 30px from the right */
             z-index: 99; /* Make sure it does not overlap */
             border: none; /* Remove borders */
@@ -213,26 +228,31 @@
             padding: 11px 15px 11px 15px; /* Some padding */
             border-radius: 5px; /* Rounded corners */
             font-size: 18px; /* Increase font size */
+            transition: background-color 2s, color 2s, opacity 2s;
             }
 
         #myBtn:hover {
             background-color: #555; /* Add a dark-grey background on hover */
+            opacity: 0.6;
+            color: #fff;
         }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <img src="https://64.media.tumblr.com/7e769c2aa9a614c4b089f23414c7a0e6/826a1a3e7611eb3a-bd/s500x750/720c5f9405fef47ac7be8aaf947285e2facb266c.png" width="50" height="50" class="d-inline-block align-top" alt="">
+        <img src="https://64.media.tumblr.com/7e769c2aa9a614c4b089f23414c7a0e6/826a1a3e7611eb3a-bd/s500x750/720c5f9405fef47ac7be8aaf947285e2facb266c.png" width="30" height="30" class="d-inline-block align-top" alt="">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" id="l" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" id="m" href="#">Log Out</a>
+            <a class="nav-item nav-link" id="l" href="Home.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" id="m" href="Login and Register.html">Log Out</a>
             </div>
         </div>
     </nav>
+
+    <div id="bar"></div>
 
     <div class="content">  
         <h1>Student Registration Form</h1>
@@ -351,7 +371,7 @@
                         </div>
                         <div class="col-sm">
                             <h6>Phone Number</h6>
-                            <input id="mothersnumber" type="text" name="mothersnumber" placeholder="09000000000" required aria-required="true">
+                            <input id="mothersnumber" type="number" name="mothersnumber" placeholder="09000000000" required aria-required="true">
                         </div>
                     </div>
                     <div class="row">
@@ -365,7 +385,7 @@
                         </div>
                         <div class="col-sm">
                             <h6>Phone Number</h6>
-                            <input id="fathersnumber" type="text" name="fathersnumber" placeholder="09000000000" required aria-required="true">
+                            <input id="fathersnumber" type="number" name="fathersnumber" placeholder="09000000000" required aria-required="true">
                         </div>
                     </div>
                     <div class="row lastrow">
@@ -379,7 +399,7 @@
                         </div>
                         <div class="col-sm">
                             <h6>Phone Number</h6>
-                            <input id="guardiansnumber" type="text" name="guardiansnumber" placeholder="09000000000">
+                            <input id="guardiansnumber" type="number" name="guardiansnumber" placeholder="09000000000">
                         </div>
                     </div>                 
                     <input type="submit">
@@ -389,6 +409,8 @@
     </div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+
+    <div id="barb"></div>
 
     <div class="footer">
         <li><b>|</b> developed and designed by <i>BSIT 1-3 | group 1</i>
