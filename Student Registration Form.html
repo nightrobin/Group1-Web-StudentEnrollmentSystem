@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background: url("https://burst.shopifycdn.com/photos/wrtiting-tools.jpg?width=1200&format=pjpg&exif=0&iptc=0");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            font-family: "poppins";
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /*header*/
+        .navbar{
+            padding: 10px;
+            text-align: right;
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            z-index: 9;
+        }
+
+        .navbar img{
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: -9px;
+            margin-bottom: -9px;
+        }
+
+        .navbar-nav{
+            padding-right: 20px;
+        }
+
+        #l{
+            border-right: 2px solid #4e4e4e; 
+        }
+
+        @media (max-width:992px) {
+            #l{
+                border:0px solid !important
+            }
+        }
+
+        .content{
+            margin:10%;
+        }
+
+        /*page title*/
+        h1{
+            text-align: center;
+            color:#f9b34d;
+            padding: 10px 10px 10px 10px;
+            font-weight: 700;
+            font-size: 60px;
+            text-shadow: 3px 3px 5px #000;
+            cursor:default;
+        }
+
+        /*form section title*/
+        .form b{
+            color: #000;
+            font-size: 20px;
+            font-weight: 600;
+            border-bottom: 4px solid #f9b34d;
+            text-decoration: none;
+            margin-left:-15px;
+            margin-bottom: 15px;
+            cursor:default;
+        }
+
+        .form{
+            color: #000;
+            padding: 10px 15px 0 15px;
+        }
+
+        .container{
+            background-color: white;
+            padding: 10px 20px 20px 20px;
+            border-radius: 5px;
+            margin-bottom:200px;
+        }
+
+        /*input label*/
+        h6{
+            padding-top: 10px;
+            font-weight:500;
+            cursor:default;
+        }
+
+        input, select{
+            width: 100%;
+            font-weight: normal;
+        }
+
+        /*placeholder text color*/
+        select {
+            color: #9e9e9e; 
+        }
+
+        /*select options text color (not including placeholder)*/
+        option:not(:first-of-type) {
+            color: black;
+            font-weight: normal;
+        }
+
+        input[type=submit] {
+            width: 31.5%;
+            padding: 16px 32px;
+            margin: 40px -35px 40px 0; 
+            float: right;
+            font-weight: 600;
+            background-color: #f9b34d;
+            border: none;
+            border-radius: 5px;
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 2s;
+        }
+
+        input[type=submit]:hover{
+            opacity: 0.6;
+        }
+
+        .firstrow{
+            padding-top: 10px;
+        }
+        .lastrow{
+            padding-bottom: 10px;
+        }
+
+
+        .footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #343a40;
+            color: rgb(219, 219, 219);
+            text-align: left;
+            font-size: 14px;
+            height: 30px;
+            font-weight: 500;
+        }
+
+        .footer b{
+            color:#f9b34d;
+        }
+        
+        .footer i{
+            font-weight: 600;
+            font-style: normal;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer li{
+            list-style-type: none;
+            margin-left:5%;
+            padding-top:3px;
+            cursor:default;
+        }
+
+        /*SCROLLBAR*/
+        ::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #616161;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background:#f9b34d;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #fff;
+            }
+            
+        /*TEXT SELECTION*/
+        ::selection {
+            color: #616161;
+            background: #f9f871;
+        }     
+
+        /*scroll to top*/
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 40px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color:#f9b34d; /* Set a background color */
+            color: #000; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 11px 15px 11px 15px; /* Some padding */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+            }
+
+        #myBtn:hover {
+            background-color: #555; /* Add a dark-grey background on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="https://64.media.tumblr.com/7e769c2aa9a614c4b089f23414c7a0e6/826a1a3e7611eb3a-bd/s500x750/720c5f9405fef47ac7be8aaf947285e2facb266c.png" width="50" height="50" class="d-inline-block align-top" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" id="l" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" id="m" href="#">Log Out</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">  
+        <h1>Student Registration Form</h1>
+        <form action="/action_page.php" method="get">
+            <div class="container">
+                <div class="form">
+                    <b>Student Information</b>
+                    <div class="row firstrow">
+                        <div class="col-sm">
+                            <h6>Last Name</h6>
+                            <input id="lastname" type="text" name="lastname" placeholder="Dela Cruz" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>First Name</h6>
+                            <input id="firstname" type="text" name="firstname" placeholder="Juan" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Middle Name</h6>
+                            <input id="middlename" type="text" name="middlename" placeholder="Reyes" required aria-required="true">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h6>Birthdate</h6>
+                            <input id="birthdate" type="date" name="birthdate" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Email</h6>
+                            <input id="email" type="email" name="email" placeholder="example@example.com" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Phone Number</h6>
+                            <input id="phonenumber" type="number" name="phonenumber" placeholder="09000000000" required aria-required="true">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h6>Gender</h6>
+                            <select id="gender" name="gender" required aria-required="true">
+                                <option value="placeholder" disabled selected>Select your option</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Others</option>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                            <h6>Citizenship</h6>
+                            <input id="citizenship" type="text" name="citizenship" placeholder="Filipino" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h6>Student Number</h6>
+                            <input id="studentnumber" type="number" name="studentnumber" placeholder="202000000" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Year Level</h6>
+                            <select id="yearlevel" name="yearlevel" required aria-required="true">
+                                <option value="placeholder" disabled selected>Select your option</option>
+                                <option value="firstyear">1st Year</option>
+                                <option value="secondyear">2nd Year</option>
+                                <option value="thirdyear">3rd Year</option>
+                                <option value="fourthyear">4th Year</option>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                            <h6>Semester</h6>
+                            <select id="semester" name="semester" required aria-required="true">
+                                <option value="placeholder" disabled selected>Select your option</option>
+                                <option value="firstsem">1st Semester</option>
+                                <option value="secondsem">2nd Semester</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h6>Degree Program</h6>
+                            <select id="degree" name="degree" required aria-required="true">
+                                <option value="placeholder" disabled selected>Select your option</option>
+                                <option value="bsit">Bachelor of Science in Information Technology - BSIT</option>
+                                <option value="bscs">Bachelor of Science in Computer Science - BSCS</option>
+                                <option value="bscpe">Bachelor of Science in Computer Engineering - BS CpE</option>
+                            </select>
+                        </div>
+                        <div class="col-sm"> 
+                            <h6>School Year</h6>
+                            <select id="schoolyear" name="schoolyear" required aria-required="true">
+                                <option value="placeholder" disabled selected>Select your option</option>
+                                <option value="20202021">2020 - 2021</option>
+                                <option value="20212022">2021 - 2022</option>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                    </div>
+                    <div class="row lastrow">
+                        <div class="col-sm">
+                            <h6>Address</h6>
+                            <input id="address" type="text" name="address" placeholder="123 Apple Street Barangay 123 Manila" required aria-required="true">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <b>Parent/Guardian Information</b>
+                    <div class="row firstrow">
+                        <div class="col-sm">
+                            <h6>Mother's Name</h6>
+                            <input id="mothersname" type="text" name="mothersname" placeholder="Maria Dela Cruz" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Address (if different from student)</h6>
+                            <input id="mothersaddress" type="text" name="mothersaddress" placeholder="123 Apple Street Barangay 123 Manila">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Phone Number</h6>
+                            <input id="mothersnumber" type="text" name="mothersnumber" placeholder="09000000000" required aria-required="true">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h6>Father's Name</h6>
+                            <input id="fathersname" type="text" name="fathersname" placeholder="Jose Dela Cruz" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Address (if different from student)</h6>
+                            <input id="fathersaddress" type="text" name="fathersaddress" placeholder="123 Apple Street Barangay 123 Manila">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Phone Number</h6>
+                            <input id="fathersnumber" type="text" name="fathersnumber" placeholder="09000000000" required aria-required="true">
+                        </div>
+                    </div>
+                    <div class="row lastrow">
+                        <div class="col-sm">
+                            <h6>Guardian's Name</h6>
+                            <input id="guardiansname" type="text" name="guardiansname" placeholder="Feliza Dela Cruz">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Address (if different from student)</h6>
+                            <input id="guardiansaddress" type="text" name="guardiansaddress" placeholder="123 Apple Street Barangay 123 Manila">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Phone Number</h6>
+                            <input id="guardiansnumber" type="text" name="guardiansnumber" placeholder="09000000000">
+                        </div>
+                    </div>                 
+                    <input type="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+
+    <div class="footer">
+        <li><b>|</b> developed and designed by <i>BSIT 1-3 | group 1</i>
+    </div>
+
+    <script>
+        //SCROLL TO TOP
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+    
+    <!--bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
