@@ -15,46 +15,59 @@
         }
 
         body{
-            background: url("https://burst.shopifycdn.com/photos/wrtiting-tools.jpg?width=1200&format=pjpg&exif=0&iptc=0");
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s29068.pcdn.co/wp-content/uploads/students-on-computers-registration.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center center;
             background-size: cover;
             font-family: "poppins";
-            font-weight: 600;
-            letter-spacing: 1px;
         }
 
         /*header*/
-        .navbar{
-            padding: 10px;
-            text-align: right;
-            position: fixed;
-            width: 100%;
-            top: 0px;
-            z-index: 9;
-        }
-
-        .navbar img{
-            margin-left: 20px;
-            margin-right: 20px;
-            margin-top: -9px;
-            margin-bottom: -9px;
-        }
-
-        .navbar-nav{
-            padding-right: 20px;
-        }
-
-        #l{
-            border-right: 2px solid #4e4e4e; 
-        }
-
-        @media (max-width:992px) {
-            #l{
-                border:0px solid !important
-            }
-        }
+       .box-area{
+			height: 100px;
+			width: 100%;
+		}
+		.wrapper{
+			width: 1170px;
+			margin: 0 auto;
+		}
+		.logo{
+			width: 100px;
+			height: 100px;
+			float: left;
+			line-height: 100px;
+		}
+		.logo a{
+			height: 10px;
+			width: 10px;
+			margin: 0;
+		}
+		nav{
+			float: right;
+			line-height: 100px;
+		}
+		nav a{
+			text-decoration: none;
+			font-family: Century gothic; 	
+			letter-spacing: 5px;
+			color: white;
+			font-size: 20px;	
+			margin: 0 10px;
+			padding: 5px 15px;
+			transition: 0.7s ease;
+		}
+		nav a:hover{
+			background-color: #fff;
+			color: #000;
+		}
+		header{
+			height: 100px;
+			width: 100%;
+			background: #000;
+			z-index: 12;
+			position: static;
+		}
 
         #bar{
             position: fixed;
@@ -68,28 +81,27 @@
         }
 
         #barb{
-            height: 6px;
+            height: 8px;
             background-color: #dc4308; /* For browsers that do not support gradients */
-            background-image: linear-gradient(to right, #dc4308 , #f9b34d);
+            background-image: #dc4308;
             bottom:30px;
             left:0;
             width: 100%;
             z-index: 9;
+            position: fixed;
         }
-
         .content{
-            margin:10%;
+            margin:3%;
         }
 
         /*page title*/
         h1{
             text-align: center;
             color:#f9b34d;
-            padding: 10px 10px 10px 10px;
             font-weight: 700;
             font-size: 60px;
             text-shadow: 3px 3px 5px #000;
-            text-transform: lowercase;
+            text-transform: uppercase;
             cursor:default;
             letter-spacing: 2px;
         }
@@ -107,13 +119,12 @@
         }
 
         .form{
-            color: #000;
-            padding: 10px 15px 0 15px;
+            padding: 0px 15px 0 15px;
         }
 
         .container{
             background-color: white;
-            padding: 10px 20px 20px 20px;
+            padding: 10px 10px 20px 20px;
             border-radius: 5px;
             margin-bottom:200px;
             box-shadow: 2px 2px 10px;
@@ -158,18 +169,17 @@
         .lastrow{
             padding-bottom: 10px;
         }
-
-
         .footer {
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: #343a40;
+            background-color: black;
             color: rgb(219, 219, 219);
             text-align: left;
             font-size: 14px;
             height: 30px;
             font-weight: 500;
+            position: fixed;
         }
 
         .footer b{
@@ -239,21 +249,22 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <img src="https://64.media.tumblr.com/7e769c2aa9a614c4b089f23414c7a0e6/826a1a3e7611eb3a-bd/s500x750/720c5f9405fef47ac7be8aaf947285e2facb266c.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" id="l" href="Home.html">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" id="m" href="Login and Register.html">Log Out</a>
-            </div>
-        </div>
-    </nav>
-
-    <div id="bar"></div>
-
+	<div class="box-area">
+			<header>
+				<div class="wrapper">
+					<div >
+						<a href="#"><img class="logo" src="https://upload.wikimedia.org/wikipedia/en/d/dc/PLM_Seal_2013.png"></a>
+					</div>
+					<nav>
+						<a class="active" href="#">HOME</a>
+						<a href="#">ABOUT US</a>
+						<a href="#">CONTACT</a>
+						
+					</nav>
+				</div>
+			</header>
+	</div>
+	<div id="barb"></div>
     <div class="content">  
         <h1>Student Registration Form</h1>
         <form action="/action_page.php" method="get">
@@ -262,35 +273,35 @@
                     <b>Student Information</b>
                     <div class="row firstrow">
                         <div class="col-sm">
-                            <h6>Last Name</h6>
+                            <h6>Last Name:</h6>
                             <input id="lastname" type="text" name="lastname" placeholder="Dela Cruz" required aria-required="true">
                         </div>
                         <div class="col-sm">
-                            <h6>First Name</h6>
+                            <h6>First Name:</h6>
                             <input id="firstname" type="text" name="firstname" placeholder="Juan" required aria-required="true">
                         </div>
                         <div class="col-sm">
-                            <h6>Middle Name</h6>
+                            <h6>Middle Name:</h6>
                             <input id="middlename" type="text" name="middlename" placeholder="Reyes" required aria-required="true">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm">
-                            <h6>Birthdate</h6>
+                            <h6>Birthdate:</h6>
                             <input id="birthdate" type="date" name="birthdate" required aria-required="true">
                         </div>
                         <div class="col-sm">
-                            <h6>Email</h6>
+                            <h6>Email:</h6>
                             <input id="email" type="email" name="email" placeholder="example@example.com" required aria-required="true">
                         </div>
                         <div class="col-sm">
-                            <h6>Phone Number</h6>
+                            <h6>Phone Number:</h6>
                             <input id="phonenumber" type="number" name="phonenumber" placeholder="09000000000" required aria-required="true">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm">
-                            <h6>Gender</h6>
+                            <h6>Gender:</h6>
                             <select id="gender" name="gender" required aria-required="true">
                                 <option value="placeholder" disabled selected>Select your option</option>
                                 <option value="male">Male</option>
@@ -299,19 +310,21 @@
                             </select>
                         </div>
                         <div class="col-sm">
-                            <h6>Citizenship</h6>
+                            <h6>Nationality:</h6>
                             <input id="citizenship" type="text" name="citizenship" placeholder="Filipino" required aria-required="true">
                         </div>
                         <div class="col-sm">
+                        	<h6>Religion:</h6>
+                            <input id="" type="text" name="" placeholder="Catholic" required aria-required="true">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm">
-                            <h6>Student Number</h6>
+                            <h6>Student Number:</h6>
                             <input id="studentnumber" type="number" name="studentnumber" placeholder="202000000" required aria-required="true">
                         </div>
                         <div class="col-sm">
-                            <h6>Year Level</h6>
+                            <h6>Year Level:</h6>
                             <select id="yearlevel" name="yearlevel" required aria-required="true">
                                 <option value="placeholder" disabled selected>Select your option</option>
                                 <option value="firstyear">1st Year</option>
@@ -321,7 +334,7 @@
                             </select>
                         </div>
                         <div class="col-sm">
-                            <h6>Semester</h6>
+                            <h6>Semester:</h6>
                             <select id="semester" name="semester" required aria-required="true">
                                 <option value="placeholder" disabled selected>Select your option</option>
                                 <option value="firstsem">1st Semester</option>
@@ -331,7 +344,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm">
-                            <h6>Degree Program</h6>
+                            <h6>Degree Program:</h6>
                             <select id="degree" name="degree" required aria-required="true">
                                 <option value="placeholder" disabled selected>Select your option</option>
                                 <option value="bsit">Bachelor of Science in Information Technology - BSIT</option>
@@ -340,7 +353,7 @@
                             </select>
                         </div>
                         <div class="col-sm"> 
-                            <h6>School Year</h6>
+                            <h6>School Year:</h6>
                             <select id="schoolyear" name="schoolyear" required aria-required="true">
                                 <option value="placeholder" disabled selected>Select your option</option>
                                 <option value="20202021">2020 - 2021</option>
@@ -352,7 +365,7 @@
                     </div>
                     <div class="row lastrow">
                         <div class="col-sm">
-                            <h6>Address</h6>
+                            <h6>Address:</h6>
                             <input id="address" type="text" name="address" placeholder="123 Apple Street Barangay 123 Manila" required aria-required="true">
                         </div>
                     </div>
@@ -362,46 +375,123 @@
                     <b>Parent/Guardian Information</b>
                     <div class="row firstrow">
                         <div class="col-sm">
-                            <h6>Mother's Name</h6>
+                            <h6>Mother's Name:</h6>
                             <input id="mothersname" type="text" name="mothersname" placeholder="Maria Dela Cruz" required aria-required="true">
                         </div>
                         <div class="col-sm">
-                            <h6>Address (if different from student)</h6>
-                            <input id="mothersaddress" type="text" name="mothersaddress" placeholder="123 Apple Street Barangay 123 Manila">
+                            <h6>Phone Number:</h6>
+                            <input id="mothersnumber" type="number" name="mothersnumber" placeholder="09000000000" required aria-required="true">
                         </div>
                         <div class="col-sm">
-                            <h6>Phone Number</h6>
-                            <input id="mothersnumber" type="number" name="mothersnumber" placeholder="09000000000" required aria-required="true">
+                            <h6>Monthly Income:</h6>
+                            <input id="" type="number" name="" placeholder="5000" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Occupation:</h6>
+                            <input id="" type="text" name="" placeholder="" required aria-required="true">
+                        </div>
+                    </div>
+                     <div class="row firstrow">
+                     	<div class="col-sm">
+                            <h6>Address:</h6>
+                            <input id="mothersaddress" type="text" name="mothersaddress" placeholder="123 Apple Street Barangay 123 Manila">
+                        </div>
+                     </div>
+                     <hr>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h6>Father's Name:</h6>
+                            <input id="fathersname" type="text" name="fathersname" placeholder="Jose Dela Cruz" required aria-required="true">
+                        </div>
+                       
+                        <div class="col-sm">
+                            <h6>Phone Number:</h6>
+                            <input id="fathersnumber" type="number" name="fathersnumber" placeholder="09000000000" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Monthly Income:</h6>
+                            <input id="" type="number" name="" placeholder="5000" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Occupation:</h6>
+                            <input id="" type="text" name="" placeholder="" required aria-required="true">
+                        </div>
+                    </div>
+                    <div class="row">
+                    	 <div class="col-sm">
+                            <h6>Address:</h6>
+                            <input id="" type="text" name="" placeholder="123 Apple Street Barangay 123 Manila">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row lastrow">
+                        <div class="col-sm">
+                            <h6>Guardian's Name:</h6>
+                            <input id="guardiansname" type="text" name="guardiansname" placeholder="Feliza Dela Cruz">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Phone Number:</h6>
+                            <input type="number" name="guardiansnumber" placeholder="09000000000">
+                        </div>
+                         <div class="col-sm">
+                            <h6>Monthly Income:</h6>
+                            <input id="" type="number" name="" placeholder="5000" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Occupation:</h6>
+                            <input id="" type="text" name="" placeholder="" required aria-required="true">
+                        </div>
+                    </div>
+                    <div class="row lastrow">
+                    	<div class="col-sm">
+                            <h6>Address:</h6>
+                            <input id="guardiansaddress" type="text" name="guardiansaddress" placeholder="123 Apple Street Barangay 123 Manila">
+                        </div>
+                    </div>
+                    <hr>
+                     <b>Qualification</b>
+                    <div class="row firstrow">
+                        <div class="col-sm">
+                            <h6>Name of School:</h6>
+                            <input type="text" name="mothersname" placeholder="Elementary" required aria-required="true">
+                        </div>
+                        <div class="col-sm">
+                            <h6>Final Grade:</h6>
+                            <input type="text" name="mothersaddress" placeholder="">
+                        </div>
+                        <div class="col-sm">
+                            <h6>School Year:</h6>
+                            <input type="number" name="mothersnumber" placeholder="2008-2009" required aria-required="true">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm">
-                            <h6>Father's Name</h6>
-                            <input id="fathersname" type="text" name="fathersname" placeholder="Jose Dela Cruz" required aria-required="true">
+                            <h6>Name of School:</h6>
+                            <input type="text" name="" placeholder="Secondary " required aria-required="true">
                         </div>
                         <div class="col-sm">
-                            <h6>Address (if different from student)</h6>
-                            <input id="fathersaddress" type="text" name="fathersaddress" placeholder="123 Apple Street Barangay 123 Manila">
+                            <h6>Final Grade:</h6>
+                            <input type="text" name="" placeholder="">
                         </div>
                         <div class="col-sm">
-                            <h6>Phone Number</h6>
-                            <input id="fathersnumber" type="number" name="fathersnumber" placeholder="09000000000" required aria-required="true">
+                            <h6>School Year:</h6>
+                            <input type="number" name="" placeholder="2008-2009" required aria-required="true">
                         </div>
                     </div>
                     <div class="row lastrow">
                         <div class="col-sm">
-                            <h6>Guardian's Name</h6>
-                            <input id="guardiansname" type="text" name="guardiansname" placeholder="Feliza Dela Cruz">
+                            <h6>Name of School:</h6>
+                            <input type="text" name="" placeholder="Tertiary">
                         </div>
                         <div class="col-sm">
-                            <h6>Address (if different from student)</h6>
-                            <input id="guardiansaddress" type="text" name="guardiansaddress" placeholder="123 Apple Street Barangay 123 Manila">
+                            <h6>Final Grade:</h6>
+                            <input type="text" name="" placeholder="">
                         </div>
                         <div class="col-sm">
-                            <h6>Phone Number</h6>
-                            <input id="guardiansnumber" type="number" name="guardiansnumber" placeholder="09000000000">
+                            <h6>School Year:</h6>
+                            <input id="" type="number" name="" placeholder="2008-2009">
                         </div>
-                    </div>                 
+                    </div>                  
                     <input type="submit">
                 </div>
             </div>
