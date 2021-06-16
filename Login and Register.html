@@ -1,43 +1,81 @@
 <!DOCTYPEhtml>
-<html lang="eng">
+<html>
 	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
 		body, html{
 			height: 100%;
 			margin: 0;
 			padding: 0;
 			font-family: arial;
-			background-image: url(https://burst.shopifycdn.com/photos/wrtiting-tools.jpg?width=1200&format=pjpg&exif=0&iptc=0);
+			background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://burst.shopifycdn.com/photos/wrtiting-tools.jpg?width=1200&format=pjpg&exif=0&iptc=0);
 			-webkit-background-size: cover;
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center center;
 			width: 100%;
-
 		}
-		.avatar{
-				
+		/* Header */
+		.box-area{
+			height: 100px;
+			width: 100%;
+			border-bottom: 10px solid #dc4308;
+		}
+		.wrapper{
+			width: 1170px;
+			margin: 0 auto;
+		}
+		.logo{
+			width: 100px;
+			height: 100px;
+			float: left;
+			line-height: 100px;
+		}
+		.logo a{
+			height: 10px;
+			width: 10px;
+			margin: ;
+		}
+		nav{
+			float: right;
+			line-height: 100px;
+		}
+		nav a{
+			text-decoration: none;
+			font-family: Century gothic; 	
+			letter-spacing: 5px;
+			color: white;
+			font-size: 20px;	
+			margin: 0 10px;
+			padding: 5px 15px;
+			transition: 0.7s ease;
+		}
+		nav a:hover{
+			background-color: #fff;
+			color: #000;
+		}
+		nav a.active{
+			background-color: #fff;
+			color: #000;
+		}
+
+		header{
+			height: 100px;
+			width: 100%;
+			background: #000;
+			z-index: 12;
+			position: fixed;
+		}
+		/*Login Box*/
+        .avatar{
 			height: 150px;
 			width: 150px;
 			position: absolute;
 			border-radius: 50%;
 			top: -88px;
-			left: calc(50% - 83px);
-
-		}
-		.loginbox{
-			width: 420px;
-			height: 520px;
-			background: #ffd9de	;
-			color: #fff;
-			top: 50%;
-			left: 50%;
-			position: absolute;
-			transform: translate(-50%, -50%);
-			box-sizing: border-box;
-			border: solid black;
-			border-radius: 23px;
-			padding: 70px 30px;
-			box-shadow: 10px 10px 5px black;
+			left: calc(50% - 80px);
 		}
 		h1{
 			color: black;
@@ -46,8 +84,22 @@
 			margin: 0;
 			text-align: center;	
 		}
-		
-		.loginbox p{
+        .loginbox{
+			width: 420px;
+			height: 520px;
+			background: #ffd9de	;
+			color: #fff;
+			top: 57%;
+			left: 50%;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			box-sizing: border-box;
+			border: solid black;
+			border-radius: 23px;
+			padding: 100px 30px;
+			box-shadow: 10px 10px 5px black;
+		}
+        .loginbox p{
 			color: black;
 			font-weight: bold;
 			font-size: 25px;
@@ -78,6 +130,8 @@
 			cursor: pointer;
 			background: white;
 			color: black;
+			border: 2px solid black;
+			transition: 0.5s linear;
 		}
 		.loginbox a{
 			text-decoration: none;
@@ -85,52 +139,46 @@
 			line-height: 20px;
 			color: black;
 		}
-
 	</style>
-
 	<head>
 			<meta charset="UTF-8">
 		    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		    <meta name="description" content="">
 		    <meta name="author" content="">
 		    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-		    <title>Login</title>
-
-
-
-
-
-
-
+			<TITLE>HOME</TITLE>
 	</head>
-
 	<body>
-		<div class="loginbox">
-		<img src="https://lh3.googleusercontent.com/proxy/gd4ZWsSPLBjyRDr2wn4_NgilSbrmPV19SfFQrBETEcQWdHCvdBSjWUpf39fSBZsYqJvFB7UVsWB8vaOcD5_Na6aU6ryYTTOCKmzV8QM" class="avatar">
-		<form>
-			<h1>Login Here</h1>
-			<p>Username</p>	
-			<input type="text" name="" placeholder="Enter Username">
-			<p>Password</p>
-			<input type="password" name="" placeholder="Enter Password">
-			<input type="submit" name="" value="Login">
-			<input type="submit" name="" value="Register">
-			<a href="#" class="fontcolor">Forgot Password?</a>
-			<a href="#" class="fontcolor">Don't have an account</a>
-		</form>
+		<div class="box-area">
+			<header>
+				<div class="wrapper">
+					<div >
+						<a href="#"><img class="logo" src="https://upload.wikimedia.org/wikipedia/en/d/dc/PLM_Seal_2013.png"></a>
+					</div>
+					<nav>
+						<a class="active" href="#">HOME</a>
+						<a href="#">ABOUT US</a>
+						<a href="#">CONTACT</a>
+						
+					</nav>
+				</div>
+			</header>
+			<div>
+				<div class="loginbox">
+					<img src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t1.6435-9/199678872_1712294682288556_6256501993358016654_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=730e14&_nc_ohc=e2vdtzUhe_UAX-umexG&_nc_ht=scontent.fmnl4-1.fna&oh=9389501398773398859c3d483bada96c&oe=60CD4124" class="avatar">
+					<form>
+						<h1>Login Here</h1>
+						<p>Username</p>	
+						<input type="text" name="" placeholder="Enter Username">
+						<p>Password</p>
+						<input type="password" name="" placeholder="Enter Password">
+						<input type="submit" name="" value="Login">
+						<input type="submit" name="" value="Register">
+						<a href="#" class="fontcolor">Forgot Password?</a>
+						<a href="#" class="fontcolor">Don't have an account</a>
+					</form>
+				</div>
+			</div>
 		</div>
-
-
-		
-		
-
-		
-
-
-
-
-
-
-
 	</body>
 </html>
