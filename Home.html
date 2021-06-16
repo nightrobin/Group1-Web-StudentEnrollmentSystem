@@ -15,17 +15,67 @@
         }
 
         body{
-            background: url("https://burst.shopifycdn.com/photos/wrtiting-tools.jpg?width=1200&format=pjpg&exif=0&iptc=0");
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://d27p8o2qkwv41j.cloudfront.net/wp-content/uploads/2018/04/shutterstock_564206080-e1524025923394.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center center;
             background-size: cover;
+           
             font-family: "poppins";
-            font-weight: 600;
-            letter-spacing: 1px;
         }
 
         /*header*/
+        .box-area{
+            height: 100px;
+            width: 100%;
+            border-bottom: 10px solid #dc4308;
+        }
+        .wrapper{
+            width: 1170px;
+            margin: 0 auto;
+        }
+        .logo{
+            width: 100px;
+            height: 100px;
+            float: left;
+            line-height: 100px;
+        }
+        .logo a{
+            height: 10px;
+            width: 10px;
+            margin: ;
+        }
+        nav{
+            float: right;
+            line-height: 100px;
+        }
+        nav a{
+            text-decoration: none;
+            font-family: Century gothic;    
+            letter-spacing: 5px;
+            color: white;
+            font-size: 20px;    
+            margin: 0 10px;
+            padding: 5px 15px;
+            transition: 0.7s ease;
+        }
+        nav a:hover{
+            background-color: #fff;
+            color: #000;
+        }
+        nav a.active{
+            background-color: #fff;
+            color: #000;
+        }
+
+        header{
+            height: 100px;
+            width: 100%;
+            background: #000;
+            z-index: 12;
+            position: fixed;
+        }
+        /**/
         .navbar{
             padding: 10px;
             text-align: right;
@@ -86,17 +136,18 @@
 
         .container{
             background-color: white;
-            padding: 10px 20px 20px 20px;
+            padding: 60px 20px 20px 20px;
             border-radius: 5px;
             width: 350px;
             box-shadow: 4px 4px 15px;
+            margin-top: 13%;
         }
 
         .footer {
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: #343a40;
+            background-color: black;
             color: rgb(219, 219, 219);
             text-align: left;
             font-size: 14px;
@@ -236,24 +287,25 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <img src="https://64.media.tumblr.com/7e769c2aa9a614c4b089f23414c7a0e6/826a1a3e7611eb3a-bd/s500x750/720c5f9405fef47ac7be8aaf947285e2facb266c.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" id="m" href="Login and Register.html">Log Out</a>
-            </div>
-        </div>
-    </nav>
+    <div class="box-area">
+            <header>
+                <div class="wrapper">
+                    <div >
+                        <a href="#"><img class="logo" src="https://upload.wikimedia.org/wikipedia/en/d/dc/PLM_Seal_2013.png"></a>
+                    </div>
+                    <nav>
+                        <a class="active" href="#">HOME</a>
+                        <a href="#">ABOUT US</a>
+                        <a href="#">CONTACT</a>
+                        
+                    </nav>
+                </div>
+            </header>
+    </div>
 
-    <div id="bar"></div>
+    
 
     <div class="content">
-        <div class="logo">
-            <img src="https://64.media.tumblr.com/7e769c2aa9a614c4b089f23414c7a0e6/826a1a3e7611eb3a-bd/s500x750/720c5f9405fef47ac7be8aaf947285e2facb266c.png" width="150" height="150">  
-        </div>
         <div class="container">
             <div id="title">Navigation</div>
                 <div id="tabnav">
@@ -305,3 +357,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
+
